@@ -30,7 +30,7 @@ const APP = {
     },
 
     showLoading() {
-        this.elements.resultsArea.innerHTML = '<div class="spinner"></div><p style="text-align:center; margin-top:1rem;">Searching for food...</p>';
+        this.elements.resultsArea.innerHTML = '<div class="spinner"></div><p style="text-align:center; margin-top:1rem;">Cooking up some results...</p>';
     },
 
     async handleSearch() {
@@ -252,4 +252,5 @@ const APP = {
 
 document.addEventListener('DOMContentLoaded', () => {
     APP.init();
+
 });
