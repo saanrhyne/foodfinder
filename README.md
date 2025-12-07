@@ -4,7 +4,7 @@
 ### Inspiration
 When we first arrived at CrabHacks 2025, we were excited for the competition, prizes, and, of course, free food! When we saw that one of the food options was Panda Express, we were excited. However, one of our teammates is halal, so he couldn't have most of the food offered by Panda Express. To solve this, we decided that we would walk somewhere to get lunch together. Unfortunately, we couldn't decide on a good place to eat. This inspired our project - FoodFinder.
 
-People can’t often agree on a place to eat or find places that fit their dietary restrictions. FoodFinder solves this issue by doing all the work for you - finding nearby resturants that meet whatever preferences and restrictions your group has.
+People can’t often agree on a place to eat or find places that fit their dietary restrictions. FoodFinder solves this issue by doing all the work for you - finding nearby restaurants that meet whatever preferences and restrictions your group has.
 
 ### Target Audience
 Our target audience is a broad range of people:
@@ -16,7 +16,7 @@ Our target audience is a broad range of people:
 Those in new places, or looking to find  new food spots. People with dietary restrictions or picky friends. The list goes on and on - anyone can use FoodFinder, as its simple, fast, and free!
 
 ### Why is FoodFinder Better?
-Google, ChatGPT, Tripadvisor, and other alternatives just can't compete. FoodFinder is easier to use, free, has no sign up, and doesn't collect your data. It gives you exactly what you're looking for, and nothing more. No ads, no sponsored content, no trackers. FoodFinder rapidly pairs you with resturants that match your tastes, all from your browser.
+Google, ChatGPT, Tripadvisor, and other alternatives just can't compete. FoodFinder is easier to use, free, has no sign up, and doesn't collect your data. It gives you exactly what you're looking for, and nothing more. No ads, no sponsored content, no trackers. FoodFinder rapidly pairs you with restaurants that match your tastes, all from your browser.
 
 ### Marketing Plan
 Of course, we would like to create a social media presence and post videos highlighting the benefits of our app in a relatable way. However, we want to do much more than that. 
