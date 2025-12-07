@@ -152,7 +152,6 @@ const APP = {
                 name,
                 cuisines,
                 address,
-                image,
                 lat,
                 lon,
                 tags
@@ -282,4 +281,5 @@ const APP = {
 document.addEventListener('DOMContentLoaded', () => {
     APP.init();
 });
+
 
