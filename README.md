@@ -2,7 +2,7 @@
 *Tired of arguing with friends about where to eat? Want a fast, simple solution? Use FoodFinder. Simply input your desired characteristics, zip code, and radius, and get dozens of results in seconds!*
 
 ### Inspiration
-When we first arrived at CrabHacks 2025, we were excited for the competition, prizes, and, of course, free food! When we saw that one of the food options was Panda Express, we were excited. However, one of our teammates is halal, so he couldn't have most of the food offered by Panda Express. To solve this, we decided that we would walk somewhere to get lunch together. Unfortunately, we couldn't decide on a good place to eat. This inspired our project - FoodFinder.
+When we first arrived at CrabHacks 2025, we were excited for the competition, prizes, and, of course, free food! When we saw that one of the food options was Panda Express, we were excited. However, one of our teammates dietary restrictions is halal, so he couldn't have most of the food offered by Panda Express. To solve this, we decided that we would walk somewhere to get lunch together. Unfortunately, we couldn't decide on a good place to eat. This inspired our project - FoodFinder.
 
 People can’t often agree on a place to eat or find places that fit their dietary restrictions. FoodFinder solves this issue by doing all the work for you - finding nearby restaurants that meet whatever preferences and restrictions your group has.
 
