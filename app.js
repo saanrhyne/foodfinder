@@ -30,7 +30,7 @@ const APP = {
     },
 
     showLoading() {
-        this.elements.resultsArea.innerHTML = '<div class="spinner"></div><p style="text-align:center; margin-top:1rem;">Searching for food...</p>';
+        this.elements.resultsArea.innerHTML = '<div class="spinner"></div><p style="text-align:center; margin-top:1rem;">Cooking up some results...</p>';
     },
 
     async handleSearch() {
@@ -201,7 +201,6 @@ const APP = {
     assignDiscountCodes(restaurants) {
         if (restaurants.length === 0) return restaurants;
         
-        // Only assign discount code to one of the first three results
         const numToConsider = Math.min(3, restaurants.length);
         if (numToConsider > 0) {
             const randomIndex = Math.floor(Math.random() * numToConsider);
@@ -220,7 +219,6 @@ const APP = {
             return;
         }
 
-        // Assign discount codes randomly to some restaurants
         const restaurantsWithDiscounts = this.assignDiscountCodes([...restaurants]);
 
         const countDiv = document.createElement('div');
@@ -238,7 +236,7 @@ const APP = {
             
             const discountHtml = place.discountCode ? `
                 <div class="discount-badge">
-                    Food Finder Exclusive: <span class="discount-code">${place.discountCode}</span>
+                    Exclusive Discount Code 🤑: <span class="discount-code">${place.discountCode}</span>
                 </div>
             ` : '';
 
@@ -284,3 +282,4 @@ const APP = {
 document.addEventListener('DOMContentLoaded', () => {
     APP.init();
 });
+
