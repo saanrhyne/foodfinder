@@ -30,7 +30,7 @@ const APP = {
     },
 
     showLoading() {
-        this.elements.resultsArea.innerHTML = '<div class="spinner"></div><p style="text-align:center; margin-top:1rem;">Cooking up some results...</p>';
+        this.elements.resultsArea.innerHTML = '<div class="spinner"></div><p style="text-align:center; margin-top:1rem;">Searching for food...</p>';
     },
 
     async handleSearch() {
@@ -190,6 +190,27 @@ const APP = {
         });
     },
 
+    generateDiscountCode() {
+        const prefix = 'FOOD';
+        const randomNum = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
+        const randomChar = chars[Math.floor(Math.random() * chars.length)];
+        return `${prefix}${randomChar}${randomNum}`;
+    },
+
+    assignDiscountCodes(restaurants) {
+        if (restaurants.length === 0) return restaurants;
+        
+        // Only assign discount code to one of the first three results
+        const numToConsider = Math.min(3, restaurants.length);
+        if (numToConsider > 0) {
+            const randomIndex = Math.floor(Math.random() * numToConsider);
+            restaurants[randomIndex].discountCode = this.generateDiscountCode();
+        }
+        
+        return restaurants;
+    },
+
     renderResults(restaurants) {
         const container = this.elements.resultsArea;
         container.innerHTML = '';
@@ -199,18 +220,27 @@ const APP = {
             return;
         }
 
+        // Assign discount codes randomly to some restaurants
+        const restaurantsWithDiscounts = this.assignDiscountCodes([...restaurants]);
+
         const countDiv = document.createElement('div');
         countDiv.textContent = `Found ${restaurants.length} places`;
         countDiv.style.fontWeight = 'bold';
         container.appendChild(countDiv);
 
-        restaurants.forEach(place => {
+        restaurantsWithDiscounts.forEach(place => {
             const card = document.createElement('div');
             card.className = 'restaurant-card';
 
             const cuisineTags = place.cuisines.slice(0, 4).map(c => `<span class="cuisine-tag">${c}</span>`).join(' ');
 
             const websiteHtml = `<div class="links"><a href="https://www.google.com/search?q=${encodeURIComponent(place.name + ' ' + place.address)}" target="_blank">Google It ↗</a></div>`;
+            
+            const discountHtml = place.discountCode ? `
+                <div class="discount-badge">
+                    Food Finder Exclusive: <span class="discount-code">${place.discountCode}</span>
+                </div>
+            ` : '';
 
 
             const mapUrl = `https://www.google.com/maps?ll=${place.lat},${place.lon}&hl=en&z=20&output=embed&t=h`;
@@ -238,6 +268,7 @@ const APP = {
                         <span>📍</span>
                         <span>${place.address || 'Address not available'}</span>
                     </div>
+                    ${discountHtml}
                     ${websiteHtml}
                 </div>
             `;
@@ -252,5 +283,4 @@ const APP = {
 
 document.addEventListener('DOMContentLoaded', () => {
     APP.init();
-
 });
